@@ -40,79 +40,31 @@
 			<div class="col-lg-9">
 				<div class="me-lg-4">
 					<div class="row gy-5">
-						<div class="col-md-6" data-aos="fade">
-							<article class="blog-post">
-								<div class="post-slider slider-sm rounded">
-									<img loading="lazy" decoding="async" src="images/blog/post-4.jpg" alt="Post Thumbnail">
-									
-								</div>
-								<div class="pt-4">
-									<p class="mb-3">15 Mar, 2020</p>
-									<h2 class="h4"><a class="text-black" href="blog-details.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></h2>
-									<p>Heading example Here is example of hedings. You can use this heading by following …</p> <a href="blog-details.html" class="text-primary fw-bold" aria-label="Read the full article by clicking here">Read More</a>
-								</div>
+						
+							@if($articles->isNotEmpty())
+						
+				                @foreach ($articles as $article)
+									<div class="col-md-6" data-aos="fade">
+									<article class="blog-post">
+										<div class="post-slider slider-sm rounded">
+											<img loading="lazy" decoding="async" src="{{ asset('storage/'.$article->image) }}" alt="Post Thumbnail">
+											
+										</div>
+										<div class="pt-4">
+											<p class="mb-3">15 Mar, 2020</p>
+											<h2 class="h4"><a class="text-black" href="blog-details.html">{{$article->title}}</a></h2>
+											<p>{!! $article->content !!}</p> <a href="blog-details.html" class="text-primary fw-bold" aria-label="Read the full article by clicking here">Read More</a>
+										</div>
 							</article>
-						</div>
-						<div class="col-md-6" data-aos="fade">
-							<article class="blog-post">
-								<div class="post-slider slider-sm rounded">
-									<img loading="lazy" decoding="async" src="images/blog/post-1.jpg" alt="Post Thumbnail">
-								</div>
-								<div class="pt-4">
-									<p class="mb-3">14 Mar, 2020</p>
-									<h2 class="h4"><a class="text-black" href="blog-details.html">Cheerful Loving Couple Bakers Drinking Coffee</a></h2>
-									<p>It’s no secret that the digital industry is booming. From exciting startups to global …</p> <a href="blog-details.html" class="text-primary fw-bold" aria-label="Read the full article by clicking here">Read More</a>
-								</div>
-							</article>
-						</div>
-						<div class="col-md-6" data-aos="fade">
-							<article class="blog-post">
-								<div class="post-slider slider-sm rounded">
-									<img loading="lazy" decoding="async" src="images/blog/post-2.jpg" alt="Post Thumbnail">
-								</div>
-								<div class="pt-4">
-									<p class="mb-3">14 Mar, 2020</p>
-									<h2 class="h4"><a class="text-black" href="blog-details.html">Cheerful Loving Couple Bakers Drinking Coffee</a></h2>
-									<p>It’s no secret that the digital industry is booming. From exciting startups to global …</p> <a href="blog-details.html" class="text-primary fw-bold" aria-label="Read the full article by clicking here">Read More</a>
-								</div>
-							</article>
-						</div>
-						<div class="col-md-6" data-aos="fade">
-							<article class="blog-post">
-								<div class="post-slider slider-sm rounded">
-									<img loading="lazy" decoding="async" src="images/blog/post-3.jpg" alt="Post Thumbnail">
-								</div>
-								<div class="pt-4">
-									<p class="mb-3">14 Mar, 2020</p>
-									<h2 class="h4"><a class="text-black" href="blog-details.html">Cheerful Loving Couple Bakers Drinking Coffee</a></h2>
-									<p>It’s no secret that the digital industry is booming. From exciting startups to global …</p> <a href="blog-details.html" class="text-primary fw-bold" aria-label="Read the full article by clicking here">Read More</a>
-								</div>
-							</article>
-						</div>
-						<div class="col-md-6" data-aos="fade">
-							<article class="blog-post">
-								<div class="post-slider slider-sm rounded">
-									<img loading="lazy" decoding="async" src="images/blog/post-4.jpg" alt="Post Thumbnail">
-								</div>
-								<div class="pt-4">
-									<p class="mb-3">14 Mar, 2020</p>
-									<h2 class="h4"><a class="text-black" href="blog-details.html">Cheerful Loving Couple Bakers Drinking Coffee</a></h2>
-									<p>It’s no secret that the digital industry is booming. From exciting startups to global …</p> <a href="blog-details.html" class="text-primary fw-bold" aria-label="Read the full article by clicking here">Read More</a>
-								</div>
-							</article>
-						</div>
-						<div class="col-md-6" data-aos="fade">
-							<article class="blog-post">
-								<div class="post-slider slider-sm rounded">
-									<img loading="lazy" decoding="async" src="images/blog/post-5.jpg" alt="Post Thumbnail" width="420" height="280">
-								</div>
-								<div class="pt-4">
-									<p class="mb-3">14 Mar, 2020</p>
-									<h2 class="h4"><a class="text-black" href="blog-details.html">Cheerful Loving Couple Bakers Drinking Coffee</a></h2>
-									<p>It’s no secret that the digital industry is booming. From exciting startups to global …</p> <a href="blog-details.html" class="text-primary fw-bold" aria-label="Read the full article by clicking here">Read More</a>
-								</div>
-							</article>
-						</div>
+							</div>
+								@endforeach
+							
+							
+						@endif
+						
+						
+					
+						
 						<div class="col-12">
 							<nav class="mt-4">
 								<!-- pagination -->
